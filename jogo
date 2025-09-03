@@ -1,0 +1,54 @@
+programa
+{
+	inclua biblioteca Texto --> t
+	inclua biblioteca Util
+ --> u
+
+	
+	funcao inicio()
+	{
+		cadeia resposta
+	
+		cadeia narrador = "Você está pronto(a) para se tornar a grande guerra Neera? "
+		escreva("\n")
+		escrevaMaquina(narrador, 25)
+		escreva("\n")
+		escreva("------------------------\n")
+		escreva(" s --> sim   n --> não ")
+		escreva("\n")
+		leia(resposta)
+		
+		escolhaJogador()
+	}
+
+	
+	funcao escrevaMaquina(cadeia texto, inteiro velocidade){
+
+		para(inteiro i=0; i < t.numero_caracteres(texto); i++){
+		escreva(t.obter_caracter(texto, i))
+		u.aguarde(velocidade)
+	}
+}
+
+	funcao escolhaJogador(){
+		cadeia respostaJogador
+		leia(respostaJogador)
+
+		se(respostaJogador == "s" ou respostaJogador == "S"){
+			escreva("oii")
+		}
+
+		se(respostaJogador == "n" ou respostaJogador == "N"){
+			cadeia nao_esta_proto = "Que pena! Talvez você esteja pronto(a) na proxima"
+			escrevaMaquina(nao_esta_proto, 25)
+		}senao{
+			enquanto(respostaJogador != "s" ou respostaJogador != "S" ou respostaJogador != "n" ou respostaJogador != "N"){
+				cadeia respostaInvalida = "Resposta inválida! Tente novamente: "
+				leia(respostaJogador)
+				escrevaMaquina(respostaInvalida, 25)
+			}
+		}
+
+		
+	}
+}
