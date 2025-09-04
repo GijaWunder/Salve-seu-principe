@@ -18,10 +18,11 @@ programa
 		escreva("\n")
 		
 		escolhaJogador()
+		inicioJogo()
 	}
 
 	
-	funcao escrevaMaquina(cadeia texto, inteiro velocidade){
+	funcao escrevaMaquina(cadeia texto, inteiro velocidade){ // escrita dos textos
 
 		para(inteiro i=0; i < t.numero_caracteres(texto); i++){
 		escreva(t.obter_caracter(texto, i))
@@ -29,7 +30,7 @@ programa
 	}
 }
 
-	funcao escolhaJogador(){
+	funcao escolhaJogador(){ // escolhe se vai começar o jogo
 		cadeia respostaJogador
 		leia(respostaJogador)
 
@@ -48,6 +49,43 @@ programa
 			}
 		}
 
+		
+	}
+
+	funcao inicioJogo(){ // contextualizando a história do jogo e 
+		
+		cadeia contexto1 = ""// parte do Rex 
+		escrevaMaquina(contexto1, 25)
+		cadeia contexto2 = ""// parte do Rex 
+		escrevaMaquina(contexto2, 25)
+		cadeia contexto3 = ""// parte do Rex 
+		escrevaMaquina(contexto3, 25)
+		cadeia contexto4 = ""// parte do Rex 
+		escrevaMaquina(contexto4, 25)
+		
+		cadeia fala1 = "" // parte do Rex
+		escrevaMaquina(fala1, 25)
+		cadeia fala2 = "" // parte do Rex
+		escrevaMaquina(fala2, 25)
+		cadeia fala3 = "" // parte do Rex
+		escrevaMaquina(fala3, 25)
+		escreva("\n")
+		escreva("------------------------\n")
+		escreva(" sim --> s   não --> n ")
+		escreva("\n")
+		cadeia respostaNeera 
+		leia(respostaNeera)
+
+		se(respostaNeera == "s" ou respostaNeera == "S"){
+			//vai para a parte da giovana
+		}
+		senao se (respostaNeera == "n" ou respostaNeera == "N"){
+			cadeia execucao = ""// parte do Rex
+		}
+
+	}
+
+	funcao primeiraBatalha(){
 		
 	}
 }
