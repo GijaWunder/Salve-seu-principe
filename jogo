@@ -14,9 +14,8 @@ programa
 		escrevaMaquina(narrador, 25)
 		escreva("\n")
 		escreva("------------------------\n")
-		escreva(" s --> sim   n --> não ")
+		escreva(" sim --> s   não --> n ")
 		escreva("\n")
-		leia(resposta)
 		
 		escolhaJogador()
 	}
@@ -38,14 +37,14 @@ programa
 			escreva("oii")
 		}
 
-		se(respostaJogador == "n" ou respostaJogador == "N"){
-			cadeia nao_esta_proto = "Que pena! Talvez você esteja pronto(a) na proxima"
+		senao se(respostaJogador == "n" ou respostaJogador == "N"){
+			cadeia nao_esta_proto = "Que pena! Talvez você esteja pronto(a) na proxima."
 			escrevaMaquina(nao_esta_proto, 25)
 		}senao{
 			enquanto(respostaJogador != "s" ou respostaJogador != "S" ou respostaJogador != "n" ou respostaJogador != "N"){
-				cadeia respostaInvalida = "Resposta inválida! Tente novamente: "
+				escreva("Resposta inválida! Tente novamente: ")
 				leia(respostaJogador)
-				escrevaMaquina(respostaInvalida, 25)
+				
 			}
 		}
 
