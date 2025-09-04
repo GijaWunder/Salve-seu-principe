@@ -9,7 +9,7 @@ programa
 	{
 		cadeia resposta
 	
-		cadeia narrador = "Você está pronto(a) para se tornar a grande guerra Neera? "
+		cadeia narrador = "Olá jogador! Eu sou o narrador, você esta pronto para se torna a poderosa guerreira Neera?"
 		escreva("\n")
 		escrevaMaquina(narrador, 25)
 		escreva("\n")
@@ -18,7 +18,7 @@ programa
 		escreva("\n")
 		
 		escolhaJogador()
-		inicioJogo()
+		
 	}
 
 	
@@ -35,7 +35,7 @@ programa
 		leia(respostaJogador)
 
 		se(respostaJogador == "s" ou respostaJogador == "S"){
-			escreva("oii")
+			inicioJogo()
 		}
 
 		senao se(respostaJogador == "n" ou respostaJogador == "N"){
@@ -52,24 +52,53 @@ programa
 		
 	}
 
-	funcao inicioJogo(){ // contextualizando a história do jogo e 
-		
-		cadeia contexto1 = ""// parte do Rex 
+	funcao inicioJogo(){ // contextualizando a história do jogo e decorre
+
+		limpa()
+		cadeia contexto1 = "Em um dia como qualquer outro. A poderosa guerreira Neera, muito conhecida no reino de Galad pelos seus grandes feitos. Escuta um bater de asas alto vindo do céu."// parte do Rex 
 		escrevaMaquina(contexto1, 25)
-		cadeia contexto2 = ""// parte do Rex 
-		escrevaMaquina(contexto2, 25)
-		cadeia contexto3 = ""// parte do Rex 
-		escrevaMaquina(contexto3, 25)
-		cadeia contexto4 = ""// parte do Rex 
-		escrevaMaquina(contexto4, 25)
+		escreva("\n")
 		
-		cadeia fala1 = "" // parte do Rex
+		cadeia contexto2 = "Quando ela olha para cima avista um grande dragão da Floresta dos Sussuros voando e fugindo de flexas, segurando algo em suas garras."
+		escrevaMaquina(contexto2, 25)
+		escreva("\n")
+		
+		cadeia contexto3 = "Curiosa pelo motivo do dragão estar voando por cima do reino. A Neera decide ir até o castelo do rei"
+		escrevaMaquina(contexto3, 25)
+
+		
+		cadeia suspense1 = "."
+		escrevaMaquina(suspense1, 1000)
+		cadeia suspense2 = "."
+		escrevaMaquina(suspense2, 1000)
+		cadeia suspense3 = "."
+		escrevaMaquina(suspense3, 1000)
+		escreva("\n")
+		escreva("\n")
+		
+		cadeia contexto4 = "Chegando no grande portão do castelo, Neera avista o rei e alguns soltados agitados. O rei percebe a sua presensa e chama ela."
+		escrevaMaquina(contexto4, 25)
+		escreva("\n")
+
+		cadeia contexto5 = "Ele pede ajuda para Neera salvar o seu filho Idris o atual principe de Galad, das garras do dragão."
+		escrevaMaquina(contexto5, 25)
+		escreva("\n")
+
+
+
+		
+		cadeia fala1 = "Rei Mirk: Guerreira Neera! preciso de você agora." // parte do Rex
 		escrevaMaquina(fala1, 25)
-		cadeia fala2 = "" // parte do Rex
+		escreva("\n")
+		
+		cadeia fala2 = "Neera: magestade o que houve?" // parte do Rex
 		escrevaMaquina(fala2, 25)
-		cadeia fala3 = "" // parte do Rex
+		escreva("\n")
+		
+		cadeia fala3 = "Rei Mirk: O meu filho foi levado pelo poderoso dragão. Você pode ir salva-lo?" // parte do Rex
 		escrevaMaquina(fala3, 25)
 		escreva("\n")
+		
 		escreva("------------------------\n")
 		escreva(" sim --> s   não --> n ")
 		escreva("\n")
@@ -77,10 +106,20 @@ programa
 		leia(respostaNeera)
 
 		se(respostaNeera == "s" ou respostaNeera == "S"){
-			//vai para a parte da giovana
+			escreva("oii")
 		}
 		senao se (respostaNeera == "n" ou respostaNeera == "N"){
-			cadeia execucao = ""// parte do Rex
+			cadeia prisao = "Rei Mirk: Não!? Guardas! Prendão ela, AGORA!!!!"
+			escrevaMaquina(prisao, 25)
+			escreva("\n")
+			
+			cadeia game_over = "(Neera é presa para sempre, apodrecendo no calabouço. O principe Idris não é salvo e nunca mais é visto. O rei Mirk vive o resto de sua vida em tristeza profunda.)"
+			escrevaMaquina(prisao, 25)
+			escreva("\n")
+			escreva("\n")
+			escreva("\n")
+
+			
 		}
 
 	}
