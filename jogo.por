@@ -8,22 +8,21 @@ programa
 	{
 		cadeia resposta
 
-		escreva("███████╗ █████╗ ██╗    ██╗   ██╗███████╗    ███████╗███████╗██╗   ██╗    ██████╗ ██████╗ ██╗███╗   ██╗ ██████╗██╗██████╗ ███████╗\n")
-   		escreva("██╔════╝██╔══██╗██║    ██║   ██║██╔════╝    ██╔════╝██╔════╝██║   ██║    ██╔══██╗██╔══██╗██║████╗  ██║██╔════╝██║██╔══██╗██╔════╝\n")
-   		escreva("███████╗███████║██║    ██║   ██║█████╗      ███████╗█████╗  ██║   ██║    ██████╔╝██████╔╝██║██╔██╗ ██║██║     ██║██████╔╝█████╗  \n")
-   		escreva("╚════██║██╔══██║██║    ╚██╗ ██╔╝██╔══╝      ╚════██║██╔══╝  ██║   ██║    ██╔═══╝ ██╔══██╗██║██║╚██╗██║██║     ██║██╔═══╝ ██╔══╝  \n")
-   		escreva("███████║██║  ██║███████╗╚████╔╝ ███████╗    ███████║███████╗╚██████╔╝    ██║     ██║  ██║██║██║ ╚████║╚██████╗██║██║     ███████╗\n")
-   		escreva("╚══════╝╚═╝  ╚═╝╚══════╝ ╚═══╝  ╚══════╝    ╚══════╝╚══════╝ ╚═════╝     ╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝╚═╝╚═╝     ╚══════╝\n")
-
+		escreva("███████╗ █████╗ ██╗    ██╗   ██╗███████╗     ██████╗    ██████╗ ██████╗ ██╗███╗   ██╗ ██████╗██╗██████╗ ███████╗\n")
+		escreva("██╔════╝██╔══██╗██║    ██║   ██║██╔════╝    ██╔═══██╗   ██╔══██╗██╔══██╗██║████╗  ██║██╔════╝██║██╔══██╗██╔════╝\n")
+		escreva("███████╗███████║██║    ██║   ██║█████╗      ██║   ██║   ██████╔╝██████╔╝██║██╔██╗ ██║██║     ██║██████╔╝█████╗  \n")
+		escreva("╚════██║██╔══██║██║    ╚██╗ ██╔╝██╔══╝      ██║   ██║   ██╔═══╝ ██╔══██╗██║██║╚██╗██║██║     ██║██╔═══╝ ██╔══╝  \n")
+		escreva("███████║██║  ██║███████╗╚████╔╝ ███████╗    ╚██████╔╝   ██║     ██║  ██║██║██║ ╚████║╚██████╗██║██║     ███████╗\n")
+		escreva("╚══════╝╚═╝  ╚═╝╚══════╝ ╚═══╝  ╚══════╝     ╚═════╝    ╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝╚═╝╚═╝     ╚══════╝\n")
 		escreva("\n", "\n")
 
 		u.aguarde(3000)
 		
 		cadeia narrador = "Olá jogador! Eu sou o narrador, você esta pronto para se torna a poderosa guerreira Neera?\n"
 		escrevaMaquina(narrador, 25)
-		escreva("------------------------\n")
-		escreva(" sim --> s   não --> n \n")
-		escreva("------------------------\n")
+		escreva("-------------------------\n")
+		escreva("| Sim --> s   Não --> n |\n")
+		escreva("-------------------------\n")
 		
 		escolhaJogador()
 		
@@ -96,9 +95,9 @@ programa
 		escreva("\n")
 		
 		
-		escreva("------------------------\n")
-		escreva(" sim --> s   não --> n \n")
-		escreva("------------------------\n")
+		escreva("-------------------------\n")
+		escreva("| Sim --> s   Não --> n |\n")
+		escreva("-------------------------\n")
 		
 		cadeia respostaNeera 
 		leia(respostaNeera)
@@ -133,8 +132,10 @@ programa
    		
 	}
 
-	funcao dano(inteiro minimo, inteiro maximo){
-		u.sorteia(minimo, maximo)
+	funcao inteiro dano(inteiro minimo, inteiro maximo){
+		inteiro danos = u.sorteia(minimo, maximo)
+
+		retorne danos
 	}
 
 	funcao inteiro ataque(inteiro minimo, inteiro maximo){
@@ -143,33 +144,51 @@ programa
 		retorne ataques
 	}
 
-	funcao status_Neera(){
-		inteiro vida = 100
+	
+	funcao status(inteiro Vida, inteiro dano_minimo, inteiro dano_maximo, cadeia personagem, inteiro minimo, inteiro maximo, inteiro defesa){
+		escreva("--------------------------------\n")
+		escreva("| ", personagem, " está com: ", Vida, " de vida. |\n")
+		escreva("| Pode dar de ", dano_minimo, " a ", dano_maximo, " de dano.  |\n")
+		escreva("| Tem ", defesa, " de defesa.	       |\n")
+		escreva("--------------------------------")
 		
 	}
 
-	funcao vida_Neera(inteiro vida){
-		vida = 100
-	}
 
-	funcao vida_inimigo(inteiro vida){
-		escreva("oii")
-	}
-
-	funcao defender_atacar(inteiro resposta){
+	funcao defender_atacar(cadeia resposta){
 		escreva("\n")
 		cadeia defesaOUataque = "Você deseja defender ou atacar?\n"
 		escrevaMaquina(defesaOUataque, 25)
-		escreva("(1) Defender\n")
-		escreva("(2) Atacar\n")
+		escreva("------------------\n")
+		escreva("| Defender --> d |\n")
+		escreva("| Atacar --> a   |\n")
+		escreva("------------------")
 	}
 
 	funcao contexto_primeiraBatalha(){
 		limpa()
+		cadeia resposta1
 		cadeia procuraPrincipe = "Depois da conversa que teve com o rei, a Neera pega seu cavalo e vai para a floresta atrás do princípe.\n"
 		escrevaMaquina(procuraPrincipe, 25)
 
-		cadeia meioCaminho = "Chegando no meio da floresta, ela é ataca por um goblin.\n"
+		escreva("\nDeseja ver o status de Neera?\n")
+		escreva("-------------------------\n")
+		escreva("| Sim --> s   Não --> n |\n")
+		escreva("-------------------------\n")
+		leia(resposta1)
+		u.aguarde(500)
+
+		se(resposta1 == "s" ou resposta1 == "S"){
+			escreva("\n")
+			status(100, 3, 10, "Neera", 2, 10, 80)
+		}
+		senao se(resposta1 == "n" ou resposta1 == "N"){
+			escreva("Ok, vamos continuar com a história.")
+		}
+
+		u.aguarde(500)
+
+		cadeia meioCaminho = "\nChegando no meio da floresta, ela é ataca por um goblin.\n"
 		escrevaMaquina(meioCaminho, 25)
 
 		//desenho do goblin
@@ -177,27 +196,51 @@ programa
 		cadeia luta_parte1 = "Nerra desce do cavalo e empunha a sua espada.\n"
 		escrevaMaquina(luta_parte1, 25)
 
-		//desenho espada
+		escreva("\n,\n       /\\", "\n")
+		escreva("      ||||\n")
+		escreva("      ||||\n")
+		escreva("      ||||\n")
+		escreva("      ||||\n")
+		escreva("      ||||\n")
+		escreva("      ||||\n")
+		escreva("      ||||\n")
+		escreva("      ||||\n")
+		escreva("     [====]\n")
+		escreva("  ___||__||___\n")
+		escreva(" |            | ", "\n")
+		escreva(" |____________| ", "\n")
+		escreva("     | | |\n")
+		escreva("     | | |\n")
+		escreva("     | | |\n")
+		escreva("     | | |\n")
+		escreva("     |_|_|\n")
+		escreva("    (_____)\n")
 
-		cadeia luta_parte2 = "O goblin começa a correr na direção da Neera.\n"
+		cadeia luta_parte2 = "\n,\nO goblin começa a correr na direção da Neera.\n"
 		escrevaMaquina(luta_parte2, 25)
 
-		batalhar()
+		cadeia resposta2 = "h"
+		defender_atacar(resposta2)
 		
+	}
+
+	funcao defender(cadeia resposta){
+		escreva("Nerra se defende e sua defesa sofre ", dano(3,10), " de dano. Mas o goblin não sofre danos.\n")
+		leia(resposta)
 	}
 
 	funcao batalhar(){
 
 		inteiro Resposta = 0
-		defender_atacar(Resposta)
+		//defender_atacar(Resposta)
 		leia(Resposta)
 		
-			
+		//provavelmente nao vou usar
 		escolha(Resposta){
 
 			caso 1: enquanto (Resposta == 1){
 				escreva("Nerra se defende e não sofre danos. Mas o goblin também não sofre danos.\n")
-				defender_atacar(Resposta)
+				//defender_atacar(Resposta)
 				leia(Resposta)
 			}
 				  
