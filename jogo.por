@@ -6,7 +6,9 @@ programa
 	
 	funcao inicio()
 	{
-		cadeia resposta
+
+		cadeia resposta = "g"
+		defender_atacar(resposta)
 
 		escreva("███████╗ █████╗ ██╗    ██╗   ██╗███████╗     ██████╗    ██████╗ ██████╗ ██╗███╗   ██╗ ██████╗██╗██████╗ ███████╗\n")
 		escreva("██╔════╝██╔══██╗██║    ██║   ██║██╔════╝    ██╔═══██╗   ██╔══██╗██╔══██╗██║████╗  ██║██╔════╝██║██╔══██╗██╔════╝\n")
@@ -144,25 +146,70 @@ programa
 		retorne ataques
 	}
 
+	funcao inteiro vida(inteiro Vida){
+		
+		retorne Vida
+	}
+
 	
-	funcao status(inteiro Vida, inteiro dano_minimo, inteiro dano_maximo, cadeia personagem, inteiro minimo, inteiro maximo, inteiro defesa){
+	funcao status(inteiro Vida, inteiro dano_minimo, inteiro dano_maximo, cadeia personagem, inteiro defesa){
 		escreva("--------------------------------\n")
 		escreva("| ", personagem, " está com: ", Vida, " de vida. |\n")
 		escreva("| Pode dar de ", dano_minimo, " a ", dano_maximo, " de dano.  |\n")
 		escreva("| Tem ", defesa, " de defesa.	       |\n")
-		escreva("--------------------------------")
+		escreva("--------------------------------\n")
 		
 	}
 
 
 	funcao defender_atacar(cadeia resposta){
 		escreva("\n")
-		cadeia defesaOUataque = "Você deseja defender ou atacar?\n"
+		cadeia defesaOUataque = "\n\nVocê deseja defender ou atacar?\n"
 		escrevaMaquina(defesaOUataque, 25)
 		escreva("------------------\n")
 		escreva("| Defender --> d |\n")
 		escreva("| Atacar --> a   |\n")
-		escreva("------------------")
+		escreva("------------------\n")
+
+		leia(resposta)
+		limpa()
+
+		se(resposta == "a" ou resposta == "A"){
+			atacarPrimeiroInimigo()
+		}	
+		
+	}
+
+	funcao atacarPrimeiroInimigo(){
+		 cadeia ataque1 = "Neera também parte para cima do goblin, acertando ele." 
+		 escrevaMaquina(ataque1, 25)
+		 inteiro Dano_Neera = dano(3, 10)
+		 
+		 inteiro vida_inimigo = vida(80) - Dano_Neera //vida do inimigo depois do ataque
+
+		 cadeia ataque_inimigo1 = "\nO goblin se recupera do ataque de Neera e ataca ela."
+		 escrevaMaquina(ataque_inimigo1, 25)
+		 inteiro Dano_Inimigo = dano(3, 8)
+		 
+		 inteiro vida_Neera = vida(100) - Dano_Inimigo //vida da Neera depois do ataqua
+		 
+		 u.aguarde(500)
+
+		 escreva("\nVocê deseja atacar ou esperar para se defender do ataque inimigo? \n")
+		 cadeia resposta
+		 escreva("------------------\n")
+	 	 escreva("| Defender --> d |\n")
+	 	 escreva("| Atacar --> a   |\n")
+	    	 escreva("------------------\n")
+
+		 leia(resposta)
+
+		se(resposta == "a" ou resposta == "A"){
+		 	cadeia continuar_atacando = "Nerra se prepara para atacar o goblin e corre em sua direção, lhe atacando."
+		 	escrevaMaquina(continuar_atacando, 25)
+		 	inteiro vidaInimigo2 = vida_inimigo - dano(3, 10)
+		 	//escreva(vidaInimigo2)
+		}
 	}
 
 	funcao contexto_primeiraBatalha(){
@@ -180,7 +227,7 @@ programa
 
 		se(resposta1 == "s" ou resposta1 == "S"){
 			escreva("\n")
-			status(100, 3, 10, "Neera", 2, 10, 80)
+			status(100, 3, 10, "Neera", 80)
 		}
 		senao se(resposta1 == "n" ou resposta1 == "N"){
 			escreva("Ok, vamos continuar com a história.")
@@ -195,8 +242,9 @@ programa
 
 		cadeia luta_parte1 = "Nerra desce do cavalo e empunha a sua espada.\n"
 		escrevaMaquina(luta_parte1, 25)
+		u.aguarde(1000)
 
-		escreva("\n,\n       /\\", "\n")
+		escreva("\n\n       /\\", "\n")
 		escreva("      ||||\n")
 		escreva("      ||||\n")
 		escreva("      ||||\n")
@@ -215,13 +263,18 @@ programa
 		escreva("     | | |\n")
 		escreva("     |_|_|\n")
 		escreva("    (_____)\n")
+		u.aguarde(1500)
 
-		cadeia luta_parte2 = "\n,\nO goblin começa a correr na direção da Neera.\n"
+		limpa()
+
+		cadeia luta_parte2 = "\n\nO goblin começa a correr na direção da Neera.\n\n"
 		escrevaMaquina(luta_parte2, 25)
+
+		status(80, 3, 8 , "Goblin", 70)
 
 		cadeia resposta2 = "h"
 		defender_atacar(resposta2)
-		
+
 	}
 
 	funcao defender(cadeia resposta){
@@ -229,34 +282,4 @@ programa
 		leia(resposta)
 	}
 
-	funcao batalhar(){
-
-		inteiro Resposta = 0
-		//defender_atacar(Resposta)
-		leia(Resposta)
-		
-		//provavelmente nao vou usar
-		escolha(Resposta){
-
-			caso 1: enquanto (Resposta == 1){
-				escreva("Nerra se defende e não sofre danos. Mas o goblin também não sofre danos.\n")
-				//defender_atacar(Resposta)
-				leia(Resposta)
-			}
-				  
-				   
-			pare
-			caso 2: cadeia atacar = "Neera ataca o goblin e ele sofre "
-				   escrevaMaquina(atacar, 25)
-				   ataque(2, 15)
-				   
-			pare
-			caso contrario: enquanto(Resposta != 1 ou Resposta != 2){
-				escreva ("Resposta inválida. Tente novamente:")
-				leia(Resposta)
-			}
-			pare
-		
-		}
-	}
 }
