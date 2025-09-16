@@ -7,6 +7,7 @@ programa
 	funcao inicio()
 	{
 
+
 		escreva("███████╗ █████╗ ██╗    ██╗   ██╗███████╗     ██████╗    ██████╗ ██████╗ ██╗███╗   ██╗ ██████╗██╗██████╗ ███████╗\n")
 		escreva("██╔════╝██╔══██╗██║    ██║   ██║██╔════╝    ██╔═══██╗   ██╔══██╗██╔══██╗██║████╗  ██║██╔════╝██║██╔══██╗██╔════╝\n")
 		escreva("███████╗███████║██║    ██║   ██║█████╗      ██║   ██║   ██████╔╝██████╔╝██║██╔██╗ ██║██║     ██║██████╔╝█████╗  \n")
@@ -56,14 +57,12 @@ programa
 	funcao inicioJogo(){ // contextualizando a história do jogo e decorre
 
 		limpa()
-		cadeia contexto1 = "Em um dia como qualquer outro. A poderosa guerreira Neera, muito conhecida no reino de Galad pelos seus grandes feitos. Escuta um bater de asas alto vindo do céu.\n"
+		cadeia contexto1 = "Em um dia como qualquer outro. A poderosa guerreira Neera, muito conhecida no reino de Galad pelos seus grandes feitos. Escuta um bater de asas alto vindo do céu."
 		escrevaMaquina(contexto1, 25)
 		
-		cadeia contexto2 = "Quando ela olha para cima avista um grande dragão da Floresta dos Sussuros voando e fugindo de flexas, segurando algo em suas garras.\n"
-		escrevaMaquina(contexto2, 25)
 		
-		cadeia contexto3 = "Curiosa pelo motivo do dragão estar voando por cima do reino. A Neera decide ir até o castelo do rei"
-		escrevaMaquina(contexto3, 25)
+		cadeia contexto2 = "\nQuando ela olha para cima avista um grande dragão da Floresta dos Sussuros voando e fugindo de flexas, segurando algo em suas garras.\nCuriosa pelo motivo do dragão estar voando por cima do reino. A Neera decide ir até o castelo do rei"
+		escrevaMaquina(contexto2, 25)
 
 		
 		cadeia suspense1 = "."
@@ -74,25 +73,17 @@ programa
 		escrevaMaquina(suspense3, 1000)
 		escreva("\n", "\n")
 		
-		cadeia contexto4 = "Chegando no grande portão do castelo, Neera avista o rei e alguns soltados agitados. O rei percebe a sua presensa e chama ela.\n"
-		escrevaMaquina(contexto4, 25)
-
-		cadeia contexto5 = "Ele pede ajuda para Neera salvar o seu filho Idris o atual principe de Galad, das garras do dragão.\n"
-		escrevaMaquina(contexto5, 25)
+		cadeia contexto3 = "Chegando no grande portão do castelo, Neera avista o rei e alguns soltados agitados. O rei percebe a sua presensa e chama ela.\nEle pede ajuda para Neera salvar o seu filho Idris o atual principe de Galad, das garras do dragão.\n"
+		escrevaMaquina(contexto3, 25)
 
 
 		
-		cadeia fala1 = "Rei Mirk: Guerreira Neera! preciso de você agora.\n" // parte do Rex
+		cadeia fala1 = "Rei Mirk: Guerreira Neera! preciso de você agora.\nNeera: Magestade o que houve?\n"
 		escrevaMaquina(fala1, 25)
 		
-		cadeia fala2 = "Neera: Magestade o que houve?\n" // parte do Rex
+		cadeia fala2 = "Rei Mirk: O meu filho foi levado pelo poderoso dragão. Você pode ir salva-lo?"
 		escrevaMaquina(fala2, 25)
-		
-		
-		cadeia fala3 = "Rei Mirk: O meu filho foi levado pelo poderoso dragão. Você pode ir salva-lo?" // parte do Rex
-		escrevaMaquina(fala3, 25)
 		escreva("\n")
-		
 		
 		escreva("-------------------------\n")
 		escreva("| Sim --> s   Não --> n |\n")
@@ -143,9 +134,14 @@ programa
 		retorne ataques
 	}
 
-	funcao inteiro vida(inteiro Vida){
-		
-		retorne Vida
+	funcao inteiro vida(inteiro Vida, inteiro minimo, inteiro maximo){
+		inteiro resultado = Vida - dano(minimo, maximo)
+		retorne resultado
+	}
+
+	funcao inteiro Defesa(inteiro defesA, inteiro minimo, inteiro maximo){
+		inteiro resultado = defesA - ataque(minimo, maximo)
+		retorne resultado
 	}
 
 	
@@ -173,22 +169,22 @@ programa
 
 		se(resposta == "a" ou resposta == "A"){
 			atacarPrimeiroInimigo()
-		}	
+		}senao se(resposta == "d" ou resposta == "D"){
+			defenderPrimeiroInimigo()
+		}
 		
 	}
 
 	funcao atacarPrimeiroInimigo(){
-		 cadeia ataque1 = "Neera também parte para cima do goblin, acertando ele." 
-		 escrevaMaquina(ataque1, 25)
-		 inteiro Dano_Neera = dano(3, 10)
-		 
-		 inteiro vida_inimigo = vida(80) - Dano_Neera //vida do inimigo depois do ataque
+		 cadeia ataque_Neera1 = "Neera também parte para cima do goblin, empunhando a sua espada com confiança. Acertando o goblin." 
+		 escrevaMaquina(ataque_Neera1, 25)
+		 inteiro valor_vidaInimigo1 = vida(80, 5, 15) //vida do inimigo depois do ataque
+		 inteiro valor_defesaInimigo1 = Defesa(60, 5, 15) //defesa do inimigo depois do ataque de Neera
 
-		 cadeia ataque_inimigo1 = "\nO goblin se recupera do ataque de Neera e ataca ela."
+		 cadeia ataque_inimigo1 = "\nO goblin se recupera do ataque de Neera e ataca ela com sua espada."
 		 escrevaMaquina(ataque_inimigo1, 25)
-		 inteiro Dano_Inimigo = dano(3, 8)
-		 
-		 inteiro vida_Neera = vida(100) - Dano_Inimigo //vida da Neera depois do ataqua
+		 inteiro valor_vidaNeera1 = vida(100, 4, 12) //vida da Neera depois do ataqua
+		 inteiro valor_defesaNeera1 = Defesa(80, 4, 12)
 		 
 		 u.aguarde(500)
 
@@ -198,15 +194,70 @@ programa
 	 	 escreva("| Defender --> d |\n")
 	 	 escreva("| Atacar --> a   |\n")
 	    	 escreva("------------------\n")
-
 		 leia(resposta)
+		 escreva("\n")
 
 		se(resposta == "a" ou resposta == "A"){
-		 	cadeia continuar_atacando = "Nerra se prepara para atacar o goblin e corre em sua direção, lhe atacando."
-		 	escrevaMaquina(continuar_atacando, 25)
-		 	inteiro vidaInimigo2 = vida_inimigo - dano(3, 10)
-		 	//escreva(vidaInimigo2)
+		 	cadeia ataque_Neera2 = "Nerra se prepara para atacar o goblin e corre em sua direção, lhe atacando.\n"
+		 	escrevaMaquina(ataque_Neera2, 25)
+		 
+			cadeia defesaInimigo1 = "Ele consegue se defender do golpe de Neera, usando a sua armadura para minimizar o ataque.\n"
+			escrevaMaquina(defesaInimigo1, 25)
+			inteiro valor_defesaInimigo2 = Defesa(valor_defesaInimigo1, 5, 15)
+
+			cadeia ataque_Inimigo2 = "O goblin está cheio de truques. Assim ele tira algumas lâminas de sua armadura e joga em direção a Neera.\nComo Nerra um esperava o ataque das lâminas ela é acertada."
+			escrevaMaquina(ataque_Inimigo2, 25)
+			inteiro valor_vidaNeera2 = vida(valor_vidaNeera1, 4, 12)
+			inteiro valor_defesaNeera2 = Defesa(valor_defesaNeera1, 4, 12)
+
+			escreva("Você deseja esperar para se defender dos próximos truques do goblin ou deseja atacar logo? \n")
+			escreva("------------------\n")
+		 	escreva("| Defender --> d |\n")
+		 	escreva("| Atacar --> a   |\n")
+		    	escreva("------------------\n")
+		    	leia(resposta)
+		    	escreva("\n")
+
+		    	se(resposta == "d" ou resposta == "D"){
+		    		cadeia defesaNeera1 = "Neera para e espera para ver se o goblin tem mais algum truque. O goblin vê uma brecha na guarda de Neera e lhe ataca.\nMas Neera abaixou a guarda de proposito, ela se defende e rapidamente dá um golpe no braço do goblin, em uma parte que a armadura não cobria perfeitamente."
+		    		escrevaMaquina(defesaNeera1, 25)
+		    		inteiro valor_defesaNeera3 = Defesa(valor_defesaNeera2, 4, 12)
+
+		    		inteiro valor_defesaInimigo3 = Defesa(valor_defesaInimigo2, 5, 15)
+		    		inteiro valor_vidaInimigo2 = vida(valor_vidaInimigo1, 5, 15)
+
+		    		//cadeia 
+
+		    		escreva("\n", valor_vidaNeera2, "\n", valor_defesaNeera3, "\n", valor_vidaInimigo2, "\n", valor_defesaInimigo3, "\n\n")
+		    	}
+			
+			
+			
+		}senao se(resposta == "d" ou resposta == "D"){
+			cadeia defesaNeera2 = "Depois de levar o ataque do goblin a Neera espera ele atacar novamente. Assim ela se defende do ataque usando a armadura do braço como escudo."
+			escrevaMaquina(defesaNeera2, 25)
+			inteiro valor_desfesaNeera4 = Defesa(valor_defesaNeera1, 4, 12)
+			inteiro valor_vidaNeera4 = vida(valor_vidaNeera1, 4, 12)
+
+			cadeia ataque_Neera2 = "Logo após bloquear o ataque do goblin, ela acerta um golpe em seu joelho.\nO goblin fica com um pouco de difuculdade para andar.\n"
+			escrevaMaquina(ataque_Neera2, 25)
+			inteiro valor_defesaInimigo4 = Defesa(valor_defesaInimigo1, 5, 15)
+			inteiro valor_vidaInimigo3 = vida(valor_vidaInimigo1, 5, 15)
+
 		}
+	}
+
+	funcao defenderPrimeiroInimigo(){
+		cadeia defesaNeera1 = "Neera espera o goblin atacar, assim ela bloqueia o ataque com a sua espada"
+		escrevaMaquina(defesaNeera1, 25)
+		inteiro Ataque_Inimigo = ataque(4, 10)
+
+		//inteiro Defesa_Neera = Defesa(80) - Ataque_Inimigo //defesa de Neera depois do ataque inimigo
+
+		//cadeia 
+
+		
+		
 	}
 
 	funcao contexto_primeiraBatalha(){
@@ -224,7 +275,7 @@ programa
 
 		se(resposta1 == "s" ou resposta1 == "S"){
 			escreva("\n")
-			status(100, 3, 10, "Neera", 80)
+			status(100, 5, 13, "Neera", 80)
 		}
 		senao se(resposta1 == "n" ou resposta1 == "N"){
 			escreva("Ok, vamos continuar com a história.")
@@ -267,7 +318,7 @@ programa
 		cadeia luta_parte2 = "\n\nO goblin começa a correr na direção da Neera.\n\n"
 		escrevaMaquina(luta_parte2, 25)
 
-		status(80, 3, 8 , "Goblin", 70)
+		status(80, 4, 10 , "Goblin", 60)
 
 		cadeia resposta2 = "h"
 		defender_atacar(resposta2)
