@@ -7,6 +7,8 @@ programa
 	funcao inicio()
 	{
 
+		atacarPrimeiroInimigo()
+
 		escreva("███████╗ █████╗ ██╗    ██╗   ██╗███████╗     ██████╗    ██████╗ ██████╗ ██╗███╗   ██╗ ██████╗██╗██████╗ ███████╗\n")
 		escreva("██╔════╝██╔══██╗██║    ██║   ██║██╔════╝    ██╔═══██╗   ██╔══██╗██╔══██╗██║████╗  ██║██╔════╝██║██╔══██╗██╔════╝\n")
 		escreva("███████╗███████║██║    ██║   ██║█████╗      ██║   ██║   ██████╔╝██████╔╝██║██╔██╗ ██║██║     ██║██████╔╝█████╗  \n")
@@ -17,7 +19,7 @@ programa
 
 		u.aguarde(3000)
 		
-		cadeia narrador = "Olá jogador! Eu sou o narrador, você esta pronto para se torna a poderosa guerreira Neera?\n"
+		cadeia narrador = "Olá jogador(a)! Eu sou o narrador, você esta pronto(a) para se torna a poderosa guerreira Neera?\n"
 		escrevaMaquina(narrador, 25)
 		escreva("-------------------------\n")
 		escreva("| Sim --> s   Não --> n |\n")
@@ -218,14 +220,14 @@ programa
 		    	escreva("\n")
 
 		    	se(resposta == "d" ou resposta == "D"){//falta o ataque
-		    		cadeia defesaNeera1 = "Neera para e espera para ver se o goblin tem mais algum truque. O goblin vê uma brecha na guarda de Neera e lhe ataca.\nMas Neera abaixou a guarda de proposito, ela se defende e rapidamente dá um golpe no braço do goblin, em uma parte que a armadura não cobria perfeitamente."
+		    		cadeia defesaNeera1 = "Neera para e espera para ver se o goblin tem mais algum truque. O goblin vê uma brecha na guarda de Neera e lhe ataca com a espada.\nMas Neera abaixou a guarda de proposito, ela se defende e rapidamente dá um golpe no braço do goblin, em uma parte que a armadura não cobria perfeitamente."
 		    		escrevaMaquina(defesaNeera1, 25)
 		    		inteiro valor_defesaNeera3 = Defesa(valor_defesaNeera2, 4, 12)
 
 		    		inteiro valor_defesaInimigo3 = Defesa(valor_defesaInimigo2, 5, 15)
 		    		inteiro valor_vidaInimigo2 = vida(valor_vidaInimigo1, 5, 15)
 
-		    		//cadeia 
+		    		cadeia 
 
 		    		escreva("\n", valor_vidaNeera2, "\n", valor_defesaNeera3, "\n", valor_vidaInimigo2, "\n", valor_defesaInimigo3, "\n\n")
 		    	}senao se(resposta == "a" ou resposta == "A"){
