@@ -177,7 +177,7 @@ programa
 	}
 
 	funcao atacarPrimeiroInimigo(){
-		 cadeia ataque_Neera1 = "Neera também parte para cima do goblin, empunhando a sua espada com confiança. Acertando o goblin." 
+		 cadeia ataque_Neera1 = "Neera também parte para cima do goblin, empunhando a sua espada com confiança. Desferindo um golpe nele." 
 		 escrevaMaquina(ataque_Neera1, 25)
 		 inteiro valor_vidaInimigo1 = vida(80, 5, 15) //vida do inimigo depois do ataque
 		 inteiro valor_defesaInimigo1 = Defesa(60, 5, 15) //defesa do inimigo depois do ataque de Neera
@@ -189,7 +189,7 @@ programa
 		 
 		 u.aguarde(500)
 
-		 escreva("\n\nVocê deseja atacar ou esperar para se defender do ataque inimigo? \n")
+		 escreva("\n\nVocê deseja atacar ou esperar para se defender do próximo ataque inimigo? \n")
 		 cadeia resposta
 		 escreva("------------------\n")
 	 	 escreva("| Defender --> d |\n")
@@ -202,16 +202,16 @@ programa
 		 	cadeia ataque_Neera2 = "Nerra se prepara para atacar o goblin e corre em sua direção, lhe atacando.\n"
 		 	escrevaMaquina(ataque_Neera2, 25)
 		 
-			cadeia defesaInimigo1 = "Ele consegue se defender do golpe de Neera, usando a sua armadura para minimizar o ataque.\n\n"
+			cadeia defesaInimigo1 = "Ele leva o ataque, mas como estava de armadura o ataque foi minimizado.\n\n"
 			escrevaMaquina(defesaInimigo1, 25)
 			inteiro valor_defesaInimigo2 = Defesa(valor_defesaInimigo1, 5, 15)
 
-			cadeia ataque_Inimigo2 = "Os goblins são conhecidos por serem traiçoeiros e usarem muitos truques.\nE ele não é diferente dos outros, ele tira algumas lâminas com veneno de sua armadura e joga na direção de Neera.\nComo Nerra não esperava o ataque das lâminas, ela é acertada."
+			cadeia ataque_Inimigo2 = "Os goblins são conhecidos por serem traiçoeiros e usarem muitos truques.\nE ele não é diferente dos outros, ele tira algumas lâminas com veneno de sua armadura e joga na direção de Neera.\nComo Nerra não esperava o ataque das lâminas, ela é ferida."
 			escrevaMaquina(ataque_Inimigo2, 25)
-			inteiro valor_vidaNeera2 = vida(valor_vidaNeera1, 4, 12)
-			inteiro valor_defesaNeera2 = Defesa(valor_defesaNeera1, 4, 12)
+			inteiro valor_vidaNeera2 = vida(valor_vidaNeera1, 4, 15)
+			inteiro valor_defesaNeera2 = Defesa(valor_defesaNeera1, 4, 15)
 
-			escreva("\n\nVocê deseja esperar para se defender dos próximos truques do goblin ou deseja atacar logo? \n")
+			escreva("\n\nVocê deseja esperar para se defender dos próximos truques do goblin ou deseja atacar? \n")
 			escreva("------------------\n")
 		 	escreva("| Defender --> d |\n")
 		 	escreva("| Atacar --> a   |\n")
@@ -220,19 +220,22 @@ programa
 		    	escreva("\n")
 
 		    	se(resposta == "d" ou resposta == "D"){//falta o ataque
-		    		cadeia defesaNeera1 = "Neera para e espera para ver se o goblin tem mais algum truque. O goblin vê uma brecha na guarda de Neera e lhe ataca com a espada.\nMas Neera abaixou a guarda de proposito, ela se defende e rapidamente dá um golpe no braço do goblin, em uma parte que a armadura não cobria perfeitamente."
-		    		escrevaMaquina(defesaNeera1, 25)
+		    		cadeia defesaNeera1 = "Neera para e espera para ver se o goblin tem mais algum truque. O goblin vê uma brecha na guarda de Neera e corre em sua direção.\nMas Neera abaixou a guarda de proposito, ela se defende."
 		    		inteiro valor_defesaNeera3 = Defesa(valor_defesaNeera2, 4, 12)
+		    		//\nMas Neera abaixou a guarda de proposito, ela se defende e rapidamente dá um golpe no braço do goblin, em uma parte que a armadura não cobria perfeitamente."
+		    		escrevaMaquina(defesaNeera1, 25)
+
+		    		cadeia ataqueNeera4 = ""
 
 		    		inteiro valor_defesaInimigo3 = Defesa(valor_defesaInimigo2, 5, 15)
 		    		inteiro valor_vidaInimigo2 = vida(valor_vidaInimigo1, 5, 15)
 
-		    		cadeia 
+		    		cadeia vc = "klop"
 
-		    		escreva("\n", valor_vidaNeera2, "\n", valor_defesaNeera3, "\n", valor_vidaInimigo2, "\n", valor_defesaInimigo3, "\n\n")
+		    		escreva("\n", valor_defesaNeera3, "\n",valor_defesaInimigo3, "\n", valor_vidaInimigo2, "\n", valor_defesaInimigo3, "\n\n")
 		    	}senao se(resposta == "a" ou resposta == "A"){
-		    		cadeia ataque_Neera4 = "Nerra avança para atacar o goblin. Mas ela está fraca por causa do veneno. E o goblin a ataca"
-		    		escrevaMaquina(ataque_Neera4, 25)
+		    		cadeia ataque_Neera5 = "Nerra avança para atacar o goblin. Mas ela está fraca por causa do veneno. E o goblin a ataca"
+		    		escrevaMaquina(ataque_Neera5, 25)
 		    		
 		    	}
 			
@@ -288,8 +291,24 @@ programa
 
 				escreva("\n", valor_defesaInimigo5, "\n", valor_vidaInimigo4, "\n")
 
-				
+			}senao se(resposta == "n" ou resposta == "N"){
+				cadeia InimigoSErende = "O goblin cai no chão e quando ela está prestes a dar a proximo ataque, ele fala que vai se reder.\n"
+				escrevaMaquina(InimigoSErende, 25)
 
+				escreva("Você vai acreditar no goblin?")
+				escreva("-------------------------\n")
+				escreva("| Sim --> s   Não --> n |\n")
+				escreva("-------------------------\n")
+				leia(resposta)
+
+				se(resposta == "s" ou resposta == "S"){
+					cadeia truqueInimigo3 = "Como falado anteriormente os goblins não são confiaveis e tem muitos truques.\nO goblin em um movimento rápido tira uma adaga de sua armadura e crava ela no pé de Neera, fazendo ela cair no chão."
+					escrevaMaquina(truqueInimigo3, 25)
+					inteiro valor_vidaNeera6 = vida(valor_vidaNeera5, 4, 12)
+					inteiro valor_defesaNeera8 = Defesa(valor_defesaNeera7, 4, 12)
+
+				}
+				
 			}
 			
 		}
@@ -333,9 +352,19 @@ programa
 
 		u.aguarde(500)
 
-		cadeia meioCaminho = "\nChegando no meio da floresta, ela é ataca por um goblin.\n"
-		escrevaMaquina(meioCaminho, 25)
+		cadeia ChegaFloresta = "\nChegando lá, a floresta é densa, e os raios de sol mal atravessam as copas das grandes árvores. Neera avança devagar com seu cavalo"
+		escrevaMaquina(ChegaFloresta, 25)
 
+		cadeia suspense1 = "."
+		escrevaMaquina(suspense1, 1000)
+		cadeia suspense2 = "."
+		escrevaMaquina(suspense2, 1000)
+		cadeia suspense3 = "."
+		escrevaMaquina(suspense3, 1000)
+
+		cadeia meioCaminho = "Quando ela chega no meio da floresta, um goblin aparece no meio do caminho, não deixando ela passar.\n(Ele é cumplice do dragão.)"
+		escrevaMaquina(meioCaminho, 25)
+		
 		//desenho do goblin
 
 		cadeia luta_parte1 = "Nerra desce do cavalo e empunha a sua espada.\n"
