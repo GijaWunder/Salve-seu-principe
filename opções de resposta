@@ -8,39 +8,72 @@ DEFENDER (DEPOIS DO ATAQUE DAS LÂMINAS)
 
 "Deseja continuar atacando?\n"
 
-SE SIM(continuar atacando)
+1SE SIM(continuar atacando)
 
 "Neera continua atacando o goblin em lugares onde a armadura não protegia muito.\n"
 
 "Ela acerta um chute no peito do goblin fazendo ele voar contra uma árvore.\n"
 
-"Depois que o goblin é arremessado contra a árvore, ele se levanta com dificuldade e tenta fugir."
-
-SE NÃO(continuar atacando)
+"Depois que o goblin é arremessado contra a árvore, ele se levanta com dificuldade e sai correndo."
 
 "Deseja ir atras do goblin?"
 
-SE SIM(ir atras do goblin)
+2SE SIM(ir atras do goblin)
 
 "Neera consegue alcançar o goblin e ataca ele continuamente. Ele esta a beira da morte.\n"
 
-SE NÃO(não ir atras dele)
+"Você deseja matar ele?\n"
+
+SE NÃO(não matar ele)
+
+"\nNeera decide tirar algumas informações dele e pergunta se ele estava trabalhando com o dragão e se sabia onde ele estava?\n"
+
+"O goblin responde que estava trabalhando para o dragão, mas que não sabia onde ele estava. Ele só obedeceu as ordens que o dragão lhe passou.\nMas Neera não acredita e pergunta novamente, mas agora apontando a espada para o pescoço do goblin.\n"
+
+"Ele com medo de morrer, admite que sabe onde o dragão está.\n"
+-Você precisa achar um poço que fica no meio da floresta. E quando você achar esse poço deve procurar um passagem secreta em uma parede cheia de plantas...\n-E o dragão estaria lá.\n"
+
+"Depois de ouvir a resposta do goblin. A Neera resolve deixar o goblin ir embora e vai atras desse poço." //parte do Christopher
+"Quando ela acha o poço procura a passgem secreta, acha e entra, vendo uma grande torre "
+SE SIM(matar ele)
+
+"Neera mata o goblin e vai a procura do dragão.\nComo ela não sabe aonde ele está, ela começa a andar pela floresta.\nEla acaba indo para uma parte da floresta onde não é possível ver quase nada, pois estava escurecendo e tinha muitas árvores.\nDerrepente ela cai em um buraco, quando ela olha para tras um grande lobo ataca ela."
+
+GAME OVER
+
+
+2SE NÃO(não ir atras dele)
 
 "Neera não liga muito se ele está vivo ou morto, pois a sua missão é ir atras do príncipe.\nEla continua a andar pela floresta a procura do príncipe, já estava anoitecendo quando ela por um acaso acho um poço."
 
 "Você deseja parar para descansar?"
 
-SE SIM
+3SE SIM(parou para descansar)
 
 "Neera parou para beber água e dar água para o seu cavalo.\nQuando ela senta para descansar percebe que a parede em sua frente está estranha e vai ver.\nQuando ela encosta na parede percebe que não era uma parece comum, mas sim uma passagem secreta.\n"
 
-SE NÃO
+3SE NÃO(nao parou para desecansar)
 
 "Neera não para e continua o seu caminho. Já está de noite e ela tem que voltar para o reino.\nChegando lá ela é presa pelos aguardas e levada até o rei Mirk.\nO rei fca muito bravo por ela não ter achado o seu filho e tem o dragão e manda ela para a guilhotina.\n"
 
 GAME OVER
 
-"Você deseja matar ele?\n"
+1SE NÃO(nao continuar atacando)
+
+"Deseja ir atras do goblin?"
+
+
+3SE SIM(parou para descansar)
+
+"Neera parou para beber água e dar água para o seu cavalo.\nQuando ela senta para descansar percebe que a parede em sua frente está estranha e vai ver.\nQuando ela encosta na parede percebe que não era uma parece comum, mas sim uma passagem secreta.\n"
+
+3SE NÃO(nao parou para desecansar)
+
+"Neera não para e continua o seu caminho. Já está de noite e ela tem que voltar para o reino.\nChegando lá ela é presa pelos aguardas e levada até o rei Mirk.\nO rei fca muito bravo por ela não ter achado o seu filho e tem o dragão e manda ela para a guilhotina.\n"
+
+GAME OVER
+
+
 
 SE NÃO(não matar ele)
 
