@@ -1,0 +1,14 @@
+}senao se(resposta != "n" ou  resposta != "N" ou resposta != "s" ou resposta != "S"){
+							    			enquanto(resposta != "n" ou  resposta != "N" ou resposta != "s" ou resposta != "S"){
+								    			escreva("Resposta inválida! Tente novamente:")
+								    			leia(resposta)
+						
+								    			se(resposta == "s" ou resposta == "S"){
+												    //resposta
+												
+								    			}senao se(resposta == "N" ou resposta == "n"){
+												    //resposta 
+								    			}
+								    			
+										}
+									}
