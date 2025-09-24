@@ -60,33 +60,102 @@ GAME OVER
 
 1SE NÃO(nao continuar atacando)
 
-"Deseja ir atras do goblin?"
+"Neera para os ataques e espera para ver o que o goblin fazer, ele pega a espada e parte para atacar ela, mas no meio de seu ataque ele joga terra nos olhos dela.\n(Quando ele tinha se abaixado para pegar a espada ele também pegou terra.)\nEla não consegue enxergar direito.\n\n"
 
+"Você vai corre para longe dele ou ficar?"
 
-3SE SIM(parou para descansar)
+4SE CORRER
+"Ela sai correndo acaba achando um riacho e consegue lavar o rosto rapidamente.\nQuando ela olha para uma pedra vê um saco.\n"
+"Você deseja ver o que tem no saco?"
 
-"Neera parou para beber água e dar água para o seu cavalo.\nQuando ela senta para descansar percebe que a parede em sua frente está estranha e vai ver.\nQuando ela encosta na parede percebe que não era uma parece comum, mas sim uma passagem secreta.\n"
+5SE SIM(ver oq tem no saco)
+"Neera vai até a pedra e abre o saco, dentro do saco tinha um machado.\n//(Nerra não está com sua espada, porque deixou cair, quando o goblin jogou terra em seus olhos e correu sem pegar a sua espada.)"
+//desenho dos itens
 
-3SE NÃO(nao parou para desecansar)
+"Você deseja pegar o machado?\n"
+6SE SIM
+"Neera pega o machado e o goblin logo aparece correndo em sua direção, a Neera se defende do ataque do goblin e acerta um golpe nas costa do goblin.\nEle cai no chão e a Nerra continua atacando ele."
+"Depois de matar o goblin a Neera vai atrás do princípr pela floresta...\nEla encontra outro saco no meio da floresta e abre para ver o que tinha no saco."
 
-"Neera não para e continua o seu caminho. Já está de noite e ela tem que voltar para o reino.\nChegando lá ela é presa pelos aguardas e levada até o rei Mirk.\nO rei fca muito bravo por ela não ter achado o seu filho e tem o dragão e manda ela para a guilhotina.\n"
+6SE NAO 
+"A Neera não pega o machado. Quando ela olha para trás o goblin ataca ela.\nNeera tenta pegar a sua espada na bainha, mas a espada não está lá.\nEla se lembra que não pegou a espada depois que ela deixou cair.\n"
+"O goblin vê o machado e pega ele, assim, ele começa a atacar a Neera com a sua espada e o machado.\n"
+GAME OVER 
 
+5SE NAO(n ver oq tem no saco)
+"O goblin aparece correndo, a Neera coloca a sua mão na bainha procurando a sua espada...\nMas percebe que deixou a espada cair no chão quando o goblin jogou a terra em seus olhos.\nO goblin logo ataca a Neera e crava a espada em seu peito."
 GAME OVER
 
+4SE FICAR
+"A Neera fica e o goblin começa a atacar ela.\nEla ainda tenta se defender, mas não tem muito sucesso, ela fica machucada.\nO goblin fala que só vai deixar ela viver se ela dar dinheiro para ele.\n"
+"Você vai dar dinheiro para o goblin?"
+
+GAME OVER 
+
+________________________________________¶¶¶_______
+___________________________________¶¶¶¶¶¶_¶¶¶¶_1__
+__________________________________1¶¶¶¶¶¶_¶¶¶¶¶¶¶1
+_________________________________¶¶¶¶¶¶¶1111¶¶¶¶¶_
+________________________________¶¶¶¶¶¶______¶¶¶___
+______________________________¶¶¶¶¶¶__¶¶______¶1__
+____________________________1¶¶¶¶¶____1¶¶1¶_¶1_¶__
+_____¶¶¶¶1__________________¶1_¶¶_______¶¶¶¶¶_¶¶¶_
+__1¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶1111¶¶¶¶________¶¶_1¶¶¶¶__
+_¶¶¶¶¶¶¶1¶¶¶¶______11¶¶¶¶¶¶¶¶¶1_________¶____1____
+¶¶¶1¶¶¶_¶¶_____________________________¶¶_________
+¶¶_¶¶¶_1¶__________1___________________¶¶_________
+¶¶_¶¶__¶¶__________¶¶_________________1¶__________
+¶_¶¶¶__¶¶__________¶¶_________________¶¶__________
+¶_¶¶¶___¶1_________¶1________________¶¶___________
+¶_¶¶¶___1¶¶_______¶¶1_______________1¶____________
+____¶__1¶1¶¶_____¶¶_1¶¶¶¶¶¶111_1____¶¶____________
+______¶¶__¶¶____¶¶_____11¶¶¶¶¶¶¶¶¶__¶¶____________
+_____¶¶_1¶¶____¶¶____________1¶_¶¶__¶¶____________
+_____¶¶1¶_____¶¶_____________¶¶_¶¶__¶¶____________
+______¶1¶____¶¶______________¶¶_¶¶__¶¶____________
+______¶_¶___¶¶_______________¶¶_¶¶__¶¶____________
+______¶_¶¶___¶1______________¶1_¶¶__¶¶____________
+______¶1_¶___¶¶______________¶__¶¶__¶¶____________
+______¶1_¶¶___¶1_____________¶_1¶¶__¶¶____________
+______¶¶¶¶¶_¶¶¶¶_____________¶¶¶¶¶_¶¶¶____________
+_______¶¶¶¶¶¶¶¶¶1____________¶¶¶¶¶¶¶¶¶____________
+__________1¶¶¶¶¶1________________1¶¶1_____________
 
 
-SE NÃO(não matar ele)
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+█░██░██░██░██░██░██░██░██░██░░░░░░░░░░█
+█░██░██░██░██░██░██░██░██░██░░░░░░░░░░█
+█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░█░░░░█▀▀▀█░█▀▀█░█▀▀▄░▀█▀░█▄░░█░█▀▀█░░
+░░█░░░░█░░░█░█▄▄█░█░░█░░█░░█░█░█░█░▄▄░░
+░░█▄▄█░█▄▄▄█░█░░█░█▄▄▀░▄█▄░█░░▀█░█▄▄█░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-"\nEla pergunta para ele se ele estava trabalhando com o dragão e se sabia onde ele estava?\n"
+escreva("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*-******@@@@@@@@@@@\n")
+escreva("+-*%%%@@@@@@@@@@@@@@@@@@@@@@*-*@@-@%#*@@@@@@@@@@@@\n")
+escreva("#:*@@@****#@@@@@@@@@@@@@@***@@@*%@%***@@@@@@@@@@@@\n")
+escreva("@**-*@@@@@@%*-@#-:+*%%%*-@@@@@#%@@@##-%@@@@@@@@@@@\n")
+escreva("@#*@-*@@@@@%-@@#@@@@@@@@@@@@@**@@@@##-@@@@@@@@@@@@\n")
+escreva("@@**@--@#**@@@@@@@@@@@@@@*-**--*@@#*@--@@@@@@@@@@@\n")
+escreva("@@@-*@*:*@@@@@@@@@@@@#--*@@@@%--#@%@**@@%**+%@@@@@\n")
+escreva("@@@@**-**@@@@@@#@@*%@@@@@*-*@@@#**@**@@@@@***@@@@@\n")
+escreva("@@@@@@*@@**@@@*--@@@@*--*@@@@@@@@@*-*@@@@@*-**-+-@\n")
+escreva("@@@@*-#*-+*@@@#@@*++--@@@@@@@@@@*---*-%@@@@@@**@@@\n")
+escreva("@@#*-*@@%***@@@%@@%@@@@@@@@@@@@@@@@#*%#@@@@@%@#*%@\n")
+escreva("@@@-*%@@**@@@%@@@@@@@@#*@@@@@@@@@@*+**@@@@@@@%--*@\n")
+escreva("@@@-:@**@@@*%@@@@%****@@@@@@@@@*%@@***@@@@@@%@***@\n")
+escreva("@@@@-:.  .:@@@@@@-*-.:@-@@@@@@@@@:-@**@@@@@@@#**@@\n")
+escreva("@@@@%-+*-+#@@@%**:+**+-@@@@@@@#*%@-*+*@@@@@@@-**@@\n")
+escreva("@@@@@%-----*-*--**@@*-@@@*@@@@@@+--@*#@@@@@@-%@@@@\n")
+escreva("@@@@@@@#*+*#---**@@**-@**@%-+--*-@-@@@@%*@**@@@@@@\n")
+escreva("@@@@@@@@@%@@@*-#@@#*-%**-*@@@@@@-@@@@@@%-**@@@@@@@\n")
+escreva("@@@@@@@@@@@@--:*@#***@.-@@@@@@@@@@@@@@#--*@@@@@@@@\n")
+escreva("@@@@@@@@@@@@%*----**@-@#***@@@@@@@%*#-@@%#@@@@@@@@\n")
+escreva("@@@@@@@@@@@@@*-**@@@-*@-+*@@@@@@@@*:-%@@@@@@@@@@@@\n")
+escreva("@@@@@@@@@@@@@@@@@@@@@@@@@**@@@@@*@-@@@@@@@@@@@@@@@\n")
+escreva("@@@@@@@@@@@@@@@@@@@@@@@@@---%*@---@@@@@@@@@@@@@@@@\n")
+escreva("@@@@@@@@@@@@@@@@@@@@@@@@@@@****-#@@@@@@@@@@@@@@@@@\n")
+escreva("@@@@@@@@@@@@@@@@@@@@@@@@@@@@*-@@@@@@@@@@@@@@@@@@@@\n")
 
-"O goblin responde que estava trabalhando para o dragão, mas que não sabia onde ele estava. Ele só obedeceu as ordens que o dragão lhe passou.\nMas Neera não acredita e pergunta novamente, mas agora aponta a espada para o pescoço do goblin.\n"
-
-"Ele com medo de morrer, admite que sabe onde o dragão está. Ele fala que ela precisa achar um certo poço que fica no meio da floresta.\nE quando achar ela deve procurar uma passagem secreta em uma parede cheia de plantas.\nE o dragão estaria lá.\n"
-
-"A Neera resolve deixar o goblin ir embora e vai atras desse poço." //parte do Christopher
-
-SE SIM(matar ele)
-
-"Neera mata o goblin e vai a procura do dragão.\nComo ela não sabe aonde ele está, ela começa a andar pela floresta.\nEla acaba indo para uma parte da floresta onde não é possível ver quase nada, pois estava escurecendo e tinha muitas árvores.\nDerrepente ela cai em um buraco, quando ela olha para tras um grande lobo ataca ela."
-
-GAME OVER
