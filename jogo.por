@@ -706,7 +706,7 @@ programa
 										cadeia suspense012  = "."
 										escrevaMaquina(suspense09, 1000)
 
-										cadeia esconderijo = "\nDepois de no tempo ele chega para na frente de uma caverna e entra."
+										cadeia esconderijo = "\nDepois de no tempo ele chega na frente de uma caverna e entra."
 										escrevaMaquina(esconderijo, 25)
 
 										escreva("Você deseja entrar na caverna?\n")
@@ -725,9 +725,9 @@ programa
 												escreva("----------------------------------\n")
 												leia(resposta)
 												
-											}//senao (entrar na caverna)
+											}//senao (nao entrar na caverna)
 											
-									}//senao (ir atras do goblin)
+									}//senao (nao ir atras do goblin)
 
 							
 							}senao se(resposta == "n" ou resposta == "N"){
