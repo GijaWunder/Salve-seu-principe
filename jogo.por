@@ -6,10 +6,6 @@ programa
 	
 	funcao inicio()
 	{
-
-			PrimeiroInimigo()
-
-
 		
 		escreva("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n")
 		escreva("█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n")
