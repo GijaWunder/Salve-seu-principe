@@ -980,8 +980,10 @@ programa
 											
 										}senao se(resposta == "p" ou resposta == "P"){
 											//principal
-											cadeia principal00 = "Neera ignora a trilha, por pensar que não deve levar à lugar nenhum.\nEntão ela continua andando pelo caminho principal. "
-											//CONTINUAR 
+											cadeia principal00 = "Neera ignora a trilha, por pensar que não deve levar à lugar nenhum.\nEntão ela continua andando pelo caminho principal.\nE encontra o dragão, ela está indo na direção no dragão, quando ela olha do lado da dragão, vê o príncipe.\nEle está apontando para um lugar, ela olha e vê que tem um baú lá e vai ver o que tem dentro dele.\n\n"
+											escrevaMaquina(principal00, 50)
+
+											SegundaBatalha()
 										}//fim
 
 										
