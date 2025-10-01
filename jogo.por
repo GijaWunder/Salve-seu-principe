@@ -400,6 +400,7 @@ programa
 					   		escrevaMaquina(passagemSecreta2, 50)
 
 					   		//desenho torre 
+							SegundaBatalha()
 
 							
 					   	}senao se(resposta == "N" ou resposta == "n"){
