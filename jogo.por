@@ -144,7 +144,7 @@ programa
 		escrevaMaquina(suspense3, 1000)
 		escreva("\n", "\n")
 		
-		cadeia contexto3 = "Chegando no grande portão do castelo, Neera avista o rei e alguns soltados agitados. O rei percebe a sua presensa e chama ela.\nEle pede ajuda para Neera salvar o seu filho Idris o atual principe de Galad, das garras do dragão.\n"
+		cadeia contexto3 = "Chegando no grande portão do castelo, Neera avista o rei e alguns soldados agitados. O rei percebe a sua presensa e chama ela.\nEle pede ajuda para Neera salvar o seu filho Idris o atual principe de Galad, das garras do dragão.\n"
 		escrevaMaquina(contexto3, 50)
 
 
