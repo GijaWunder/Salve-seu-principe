@@ -90,7 +90,7 @@ programa
 	funcao escolhaJogador(){// escolhe se vai começar o jogo
 
 		
-		cadeia narrador = "Olá jogador(a)! Eu sou o narrador, você esta pronto(a) para se torna a poderosa guerreira Neera?\n"
+		cadeia narrador = "Olá jogador(a)! Eu sou o narrador, você esta pronto(a) para ver a historia da poderosa guerreira Neera?\n"
 		escrevaMaquina(narrador, 50)
 		escreva("-------------------------\n")
 		escreva("| Sim --> s   Não --> n |\n")
