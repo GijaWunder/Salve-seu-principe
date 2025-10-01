@@ -353,7 +353,7 @@ programa
 									game_over(2000, 1)
 								}
 					}senao se(resposta == "N" ou resposta == "n"){
-						cadeia achaPoco = "\n\nNeera não liga muito se ele está vivo ou morto, pois a sua missão é ir atras do príncipe.\nEla continua a andar pela floresta a procura do príncipe, já estava anoitecendo quando ela por um acaso acho um poço."
+						cadeia achaPoco = "\n\nNeera não liga muito se ele está vivo ou morto, pois a sua missão é ir atras do príncipe.\nEla continua a andar pela floresta a procura do príncipe, já estava anoitecendo quando ela por um acaso acho um poço.\n\n"
 						escrevaMaquina(achaPoco, 50)
 	
 						u.aguarde(2500)
