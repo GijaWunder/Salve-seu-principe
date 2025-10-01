@@ -222,6 +222,7 @@ programa
 		escreva("-------------------------\n")
 		leia(resposta)
 		escreva("\n\n")
+		limpa()
 
 		se(resposta == "s" ou resposta == "S"){
 			inicioJogo()
@@ -719,9 +720,9 @@ programa
 										escrevaMaquina(seguir00, 50)
 
 										escreva("Você deseja ir pela esquerda ou pela direita?\n")
-										escreva("-------------------------\n")
-										escreva("| Sim --> s   Não --> n |\n")
-										escreva("-------------------------\n")
+										escreva("---------------------------------\n")
+										escreva("| Direita --> d  Esquerda --> e |\n")
+										escreva("---------------------------------\n")
 										leia(resposta)
 
 											se(resposta == "d" ou resposta == "D"){
@@ -758,9 +759,29 @@ programa
 
 													
 											}senao se(resposta == "e" ou resposta == "E"){
-												cadeia Direita00 = ""
+												cadeia Direita00 = "Ela continua pela esquerda, o caminha é iluminado e tem uma boa visao.\nNo meio do caminho ela percebe que tem uma ruina perto de onde ela estava.\n"
+												escrevaMaquina(Direita00, 50)
 
-												//CONTINUAR
+													escreva("Você deseja ir ver as ruinas?\n")
+													escreva("-------------------------\n")
+													escreva("| Sim --> s   Não --> n |\n")
+													escreva("-------------------------\n\n")
+													leia(resposta)
+
+														se(resposta == "s" ou resposta == "S"){
+															cadeia ruinas00 = "Ela decide ir ver as ruinas, chegando lá ela encontra o dragão com o principe.\nMas antes dela atacar ele, ve alguns itens no chao que podem ter ajudar a lutar com ele.\n\n"
+															escrevaMaquina(ruinas00, 50)
+
+															SegundaBatalha()
+															
+														}senao se(resposta == "N" ou resposta == "n"){
+															cadeia continuar0 = "Ela acha que nas ruinas nao vao ter nada, entao ela continua o caminho.\nQuando ela chega no fim do caminho ve um grande ork.\nEle ataca ela com um machado, ela cai no chao.\nEle pega ela pelos cabelos e joga ela contra uma arvore, perfurando o seu corpo com um dos galhos.\n\n"
+															escrevaMaquina(continuar0, 50)
+
+															game_over(2000, 1)
+														}
+
+
 											}
 											
 									}//fim 
