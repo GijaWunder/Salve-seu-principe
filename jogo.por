@@ -6,6 +6,8 @@ programa
 	
 	funcao inicio()
 	{
+
+		//CONTINUAR 761 982
 		
 		escreva("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n")
 		escreva("█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n")
@@ -132,7 +134,7 @@ programa
 		escrevaMaquina(contexto1, 50)
 		
 		
-		cadeia contexto2 = "\nQuando ela olha para cima avista um grande dragão da Floresta dos Sussuros voando e fugindo de flexas, segurando algo em suas garras.\nCuriosa pelo motivo do dragão estar voando por cima do reino. A Neera decide ir até o castelo do rei"
+		cadeia contexto2 = "\nQuando ela olha para cima avista um grande dragão da Floresta dos Sussuros voando e fugindo de flechas, segurando algo em suas garras.\nCuriosa pelo motivo do dragão estar voando por cima do reino. A Neera decide ir até o castelo do rei"
 		escrevaMaquina(contexto2, 50)
 
 		
@@ -713,8 +715,55 @@ programa
 											}//se errar
 											
 									}senao se(resposta == "n" ou resposta == "N"){//continuar ir atras
-										
-									}
+										cadeia seguir00 = "A dor no pé latejava, mas Neera não estava disposta a deixá-lo escapar.\nO sangue escorria pela sua bota, mas ela respirou fundo, levantou cambaleando um pouco.\nEla começou a seguir ele por uma trilha.\nMesmo mancando, Neera pisava em raízes largas, evitando folhas secas e galhos quebradiços, para não fazer barulho.\nLogo, ela chega a um ponto onde a trilha se divide o goblin poderia ter seguido por qualquer lado.\n\n"
+										escrevaMaquina(seguir00, 50)
+
+										escreva("Você deseja ir pela esquerda ou pela direita?\n")
+										escreva("-------------------------\n")
+										escreva("| Sim --> s   Não --> n |\n")
+										escreva("-------------------------\n")
+										leia(resposta)
+
+											se(resposta == "d" ou resposta == "D"){
+												cadeia Esquerda00 = "Essa trilha mal pode ser chamada de caminho. É cheia de galhos baixos, raízes expostas e mato fechado.\nMas há alguns galhos quebrados e alguns cortes que parecem ser de espada nos galhos das ávores."
+												escrevaMaquina(Esquerda00, 50)
+
+												escreva("Você deseja continuar a trilha ou voltar?\n")
+												escreva("----------------------------------\n")
+												escreva("| Continuar --> c   Voltar --> v |\n")
+												escreva("----------------------------------\n")
+												leia(resposta)
+
+													se(resposta == "c" ou resposta == "C"){
+														cadeia Continuar00 = "Neera continua o caminho com cuidado, prestando atenção ao seu redor.\nQuando ela escuta algumas vozes e anda mais rápido"
+														escrevaMaquina(Continuar00, 50)
+
+														cadeia suspense24 = "."
+														escrevaMaquina(suspense24, 1000)
+														cadeia suspense25 = "."
+														escrevaMaquina(suspense25, 1000)
+														cadeia suspense26 = "."
+														escrevaMaquina(suspense26, 1000)
+
+														cadeia Continuar01 = "\nEla se escode atras de uma ávore e vê o goblin falando com o dragão.\nEla vai para tras de outra árvore e encontra um saco, ela abre cuidadosamente.\n\n"
+														escrevaMaquina(Continuar01, 50)
+
+														SegundaBatalha()
+
+														
+													}senao se(resposta == "v" ou resposta == "V"){
+														cadeia Voltar00 = "Neera ignora os sinais de que alguém tinha passado por lá e decide voltar.\nDepois de andar por um tempo o seu pé começa a doer, ela para e se sentar em uma pedra para descansar.\nDerrepente ela escuta risadas vindo do topo das árvores, quando ela olha para topo das árvores vê vários goblins sentados lá.\nEles começam a atirar flechas nela.\n\n"
+														game_over(2000, 1)
+													}
+
+													
+											}senao se(resposta == "e" ou resposta == "E"){
+												cadeia Direita00 = ""
+
+												//CONTINUAR
+											}
+											
+									}//fim 
 
 
 							
@@ -785,7 +834,7 @@ programa
 						escreva("---------------------------------------------------\n")
 						leia(resposta)
 
-						se(resposta == "a" ou resposta == "A"){//falta exigir e ignorar
+						se(resposta == "a" ou resposta == "A"){
 						cadeia acreditar00 = "O goblin estava ferido e pela primeira vez, parecia que não estava tentando enganá-la com palavras traiçoeiras.\nEla abaixa a espada, mas continua em alerta.\nNeera: Estou procurando o príncipe Idris, o dragão trouxe ele para está floresta.\nNeera: Onde està o dragão?.\nO goblin se apoia em uma pedra, com a mão no jeolho machucado joelho.\nEle aponta para uma parte densa da floresta.\n"
 						escrevaMaquina(acreditar00, 50)
 
@@ -890,15 +939,81 @@ programa
 									leia(resposta)
 
 										se(resposta == "m" ou resposta == "M"){
-											//cadeia mata00 = ""
+											cadeia mata00 = "O goblin está caido no chão e Neera dá o golpe final no goblin.\n\nNeera continua seguindo em frente, em direção ao centro da floresta.\nDepois de andar por um longo tempo, ela vê o dragão com príncipe está desacordado ao lado do dragão.\nMas antes de chegar perto do dragão, ela olha para o lado e vê alguns itens caidos no chão e percebe que eles podem ser uteis para sua batalha contra o dragão.\n\n"
+											escrevaMaquina(mata00, 50)
+
+											SegundaBatalha()
 											
-										}//sozinha
-								}
-						}//se ignorar
+										}senao se(resposta == "s" ou resposta == "S"){
+											cadeia Sozinha00 = "Neera: Vou polpar a sua vida, vá embora.\nNeera fala apontando a sua espada para a floresta, o goblin se levanta com dificuldade e vai embora, Neera continua o seu caminho a procura do príncipe.\nNo meio do caminho ela encontra uma caverna e decide entrar, a caverna é bem escura, então a Neera não consegue ver que entrou no ninho dos lobos.\nEla anda mais um pouco, mas um lobo logo a ataca pelas costa e os outros também vem para atacar a Neera.\n\n"
+											escrevaMaquina(Sozinha00, 50)
+											
+											game_over(2000, 1)//o goblin entrega as armas para a Neera --> ideia
+										}//fim
+								}//fim
+						}senao se(resposta == "i" ou resposta == "I"){
+							cadeia ignorar00 = "Neera manteve a espada erguida, mas não disse nada.\nEla continuava olhando para as árvores, buscando qualquer sinal de emboscada.\nO goblin podia estar falando a verdade ou apenas ganhando tempo. Ela não confia em goblins por ser trapaceiros.\nSem dar resposta, ela se vira de lado, como se o goblin nem estivesse ali, e começou a andar.\nEla seguia por entre as árvores. O goblin hesitou, mas não fez nada. Neera continuou andando sem olhar para tras.\n\n"
+							escrevaMaquina(ignorar00, 50)
+
+							escreva("Você deseja subir em uma árvore ou continuar o caminho?\n")
+							escreva("---------------------------------\n")
+							escreva("| Subir --> s   Continuar --> c |\n")
+							escreva("---------------------------------\n\n")
+							leia(resposta)
+
+								se(resposta == "c" ou resposta == "C"){
+									cadeia continuar00 = "Neera segue seu caminho.\nAs árvores se tornam mais densas, a luz do sol passando apenas em feixes finos entre as copas.\nEla caminha por mais um tempo e vê algo que chama sua atenção.\nUma trilha estreita se desvia do caminho principal, quase não dá para ver, pois está coberta por folhas e galhos secos.\n\n"
+									escrevaMaquina(continuar00, 50)
+
+									escreva("Você vai continuar pelo caminho principal ou pela trilha escondida?\n")
+									escreva("---------------------- -----------\n")
+									escreva("| Principal --> p   Trilha --> t |\n")
+									escreva("------------------------ ---------\n\n")
+									leia(resposta)
+
+										se(resposta == "t" ou resposta == "T"){
+											//trilha
+											cadeia trilha00 = "A Neera decide arriscar e ir pela trilha, depois de andar por um tempo, a trilha começa a ficar mais fechada.\nEla tem que cortar os galhos das árvores com sua espada, para poder continuar o caminho.\nEla chega no fim da trilha e encontra uam caverna e decide entrar, quando ela caminha mais para o fundo da caverna, encontra um grande javali.\nEle corre na direção dela e crava seu dente na barriga dela.\n\n"
+											escrevaMaquina(trilha00, 50)
+
+											game_over(2000, 1)
+											
+										}senao se(resposta == "p" ou resposta == "P"){
+											//principal
+											cadeia principal00 = "Neera ignora a trilha, por pensar que não deve levar à lugar nenhum.\nEntão ela continua andando pelo caminho principal. "
+											//CONTINUAR 
+										}//fim
+
+										
+								}senao se(resposta == "s" ou  resposta == "S"){
+									cadeia subir00 = "Neera escala silenciosamente uma árvore distânte do goblin, com facilidade.\nElas chega nos galhos mais altos, ela tem uma visão ampla da floresta e do caminho principal.\nLá do alto, o goblin parece ainda parado\n\n."
+									escrevaMaquina(subir00, 50)
+
+									escreva("Você deseja observar o goblin?\n")
+									escreva("-------------------------\n")
+									escreva("| Sim --> s   Não --> n |\n")
+									escreva("-------------------------\n\n")
+									leia(resposta)
+
+										se(resposta == "s" ou resposta == "S"){
+											cadeia observar_goblin = "A Neera fica observando o goblin, ele ficou sentado em uma pedra por um tempo, mas depois saiu andando.\nNeera decide seguir ele, pois ele poderia estar indo para onde está o dragão.\n\nQuando ela percebe eles estão em uma clareira na floresta.\nQuando ela olha para tras vê um monte de goblins atras dela, ela se prepara para atacar, mas são muitos goblins e ela não consegue acabar com todos e acaba sendo morta.\n\n"
+											escrevaMaquina(observar_goblin, 50)
+
+											game_over(2000, 1)
+											
+										}senao se(resposta == "N" ou resposta == "n"){
+											cadeia ver_dragao = "Neera decide ficar olhando a floresta inteira.\nDepois de um tempo observando a floresta, ela avista o dragão saindo de tras de uma montanha com o príncipe em uma de suas garras.\n\nEla desce rapidamente da árvore e vai na direção do dragão.\nAntes dela chegar no dragão o goblin aparece novamente e entrega um saco pra ela.\nGoblin: Isso é por você ter polpado a minha vida.\n\n"
+											escrevaMaquina(ver_dragao, 50)
+
+											SegundaBatalha()
+										}//fim
+
+
+								}//fim
+							
+						}//fim
 
 					}
-				
-		    		//continuar aqui e apagar a defesa
 		    		
 		    	}//se errar
 
