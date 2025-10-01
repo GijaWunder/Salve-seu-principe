@@ -1066,7 +1066,7 @@ programa
 		cadeia suspense3 = "."
 		escrevaMaquina(suspense3, 1000)
 
-		cadeia meioCaminho = "\nQuando ela chega no meio da floresta, um goblin aparece no meio do caminho, não deixando ela passar.\n(Ele é cumplice do dragão.)"
+		cadeia meioCaminho = "\nQuando ela chega no meio da floresta, um goblin aparece no meio do caminho, não deixando ela passar.\n"
 		escrevaMaquina(meioCaminho, 50)
 		
 		//desenho do goblin
